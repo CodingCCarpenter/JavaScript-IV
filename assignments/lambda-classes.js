@@ -11,6 +11,31 @@ class Person{
     }
 }
 
+const christineDenton = new Person({
+    name: 'Christine Denton',
+    age: 31,
+    location: 'Nashville'
+
+})
+
+christy.speak();
+
+// const mage = new Humanoid({
+//     createdAt: new Date(),
+//     dimensions: {
+//       length: 2,
+//       width: 1,
+//       height: 1,
+//     },
+//     healthPoints: 5,
+//     name: 'Bruce',
+//     team: 'Mage Guild',
+//     weapons: [
+//       'Staff of Shamalama',
+//     ],
+//     language: 'Common Tongue',
+//   });
+
 class Instructor extends Person{
     constructor(obj){
         super(attributes);
