@@ -1,5 +1,6 @@
 // CODE here for your Lambda Classes
 
+/*START OF PERSON CLASS*/
 class Person{
     constructor(obj){
         this.name = obj.name;
@@ -11,6 +12,7 @@ class Person{
     }
 }
 
+/*NEW PEOPLE*/
 const christineDenton = new Person({
     name: 'Christine Denton',
     age: 31,
@@ -18,24 +20,11 @@ const christineDenton = new Person({
 
 })
 
-christy.speak();
+/*TESTS*/
+christineDenton.speak();
 
-// const mage = new Humanoid({
-//     createdAt: new Date(),
-//     dimensions: {
-//       length: 2,
-//       width: 1,
-//       height: 1,
-//     },
-//     healthPoints: 5,
-//     name: 'Bruce',
-//     team: 'Mage Guild',
-//     weapons: [
-//       'Staff of Shamalama',
-//     ],
-//     language: 'Common Tongue',
-//   });
 
+/*START OF INSTRUCTOR CLASS*/
 class Instructor extends Person{
     constructor(obj){
         super(attributes);
@@ -47,9 +36,28 @@ class Instructor extends Person{
         console.log('Today we are learning about ' + subject);
     }
     grade(student, subject){
-        console.log(`${student.name} receives a perfect score on ${subject}`)
+        console.log(`${student} receives a perfect score on ${subject}`)
     }
 }
+
+/*NEW INSTRUCTORS*/
+const ryan = new Instructor({
+    name: 'Ryan Hamblin',
+    age: 30,
+    location: 'Lambda Town, USA',
+    specialty: 'JavaScript',
+    favLanguage:'Python',
+    catchPhrase:"Hopefully we've all studied training kit."
+})
+
+/*TESTS*/
+ryan.demo('JavaScript IV');
+ryan.grade('Jordan', 'JavaScript IV');
+
+
+
+
+
 
 class Student extends Person{
     constructor(obj){
