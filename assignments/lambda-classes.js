@@ -27,7 +27,7 @@ christineDenton.speak();
 /*START OF INSTRUCTOR CLASS*/
 class Instructor extends Person{
     constructor(obj){
-        super(attributes);
+        super(obj);
         this.specialty = obj.specialty;
         this.favLanguage = obj.favLanguage;
         this.catchPhrase = obj.catchPhrase;
@@ -55,19 +55,39 @@ ryan.demo('JavaScript IV');
 ryan.grade('Jordan', 'JavaScript IV');
 
 
-
-
-
-
+/*START OF STUDENT CLASS*/
 class Student extends Person{
     constructor(obj){
-        super(attributes);
+        super(obj);
         this.previousBackground = obj.previousBackground;
         this.className = obj.className;
         this.favSubjects = obj.favSubjects;
     }
     listsSubjects(){
-        console.log(this.favSubjects.map());
-    
+        console.log(Student.favSubjects.map());
+    }
+    PRAssignment(){
+        console.log(`${Student.name} has submitted a PR for ${Student.subject}`);
+}
+    }
+
+const mary = new Student({
+    name: 'Mary Ledger',
+    age: 28,
+    location: 'Boulder, Colorado',
+    specialty: 'JavaScript',
+    favLanguage:'Python',
+    catchPhrase:"Hopefully we've all studied training kit."
+})
+
+/*START OF TEAM LEAD CLASS */
+class TeamLead extends Instructor{
+    constructor(obj){
+        super(obj);
+        this.gradClassName = obj.gradClassName;
+        this.favInstructor = obj.favInstructor;
+    }
+    standup(slackChannel){
+        console.log(`${obj.name} announces to ${slackChannel}, @channel standy times!`);
     }
 }
